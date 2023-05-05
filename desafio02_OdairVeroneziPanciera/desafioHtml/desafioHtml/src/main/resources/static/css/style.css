@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:ital,wght@0,500;1,300&display=swap');
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+:root{
+    
+    --cor-cor1: #6E85B7;
+    --cor-cor2: #B2C8DF;
+    --cor-cor3: #C4D7E0;
+    --cor-cor4: #F8F9D7;
+    --cor-cor5: #5558f5;
+    --cor-cor6: #FFF2F2;
+    --cor-cor7: #2C74B3;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+
+body{
+    padding: 15px 0 0 0;
+    box-sizing: border-box;
+    background-color: var(--cor-cor4);
+}
+
+header{
+    background-color: var(--cor-cor5);
+    padding: 5px 0;
+    width: 100%;
+}
+main{
+    margin: 8px auto 8px auto;
+}
+
+.logo{
+    display: block;
+    padding: 13px;
+    margin: 8px auto 8px auto;
+    width: 25%;
+    background-color: #fff;
+    border-radius: 16px;
+}
+
+#app {
+    padding: 15px 80px 5px 80px;
+    background-color: var(--cor-cor6);
+    border-radius: 16px;
+    border: 2px solid var(--cor-cor1);
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+#botao{
+    background-color: var(--cor-cor5);
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    transition: 1s;
+}
+
+#botao:hover{
+    background-color: #21E1E1;
+    border: 2px solid --cor-cor7;
+    color: var(--cor-cor7);
+}
+
+.barra_formulario{
+    background-color: var(--cor-cor7);
+    color: #fff;
+    border: 2px solid --cor-cor7;
+    font-family: 'Roboto', sans-serif;
+}
+
+.corpo_formulario{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.botoes_formulario{
+    display: flex;
+    justify-content: space-between;
+}
+
+.editar_salvar{
+    display: flex;
+    gap: 30px;
+}
+
+#botao_editar{
+    background-color: #CF0A0A;
+    border: 2px solid #990000;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+#botao_editar:hover{
+    background-color: #990000;
+    border: 2px solid #D61C4E;
+    color: #D61C4E;
+    transition: 1s;
+}
+
+#botao_salvar{
+    background-color: #54B435;
+    border: 2px solid #379237;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+#botao_salvar:hover{
+    background-color: #9CFF2E;
+    border: 2px solid #5D9C59;
+    color: #5D9C59;
+    transition: 1s;
+}
+
+#botao_excluir{
+    background-color: #CF0A0A;
+    border: 2px solid #990000;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+#botao_excluir:hover{
+    background-color: #990000;
+    border: 2px solid #D61C4E;
+    color: #D61C4E;
+    transition: 1s;
+}
+footer{
+    background-color: var(--cor-cor5);
+
+    text-align: center;
+    justify-items: center;
+    width: 100%;
+    height: 50px;
+    font-size: 2em;
+}
+a{
+    color: #fff;
+}

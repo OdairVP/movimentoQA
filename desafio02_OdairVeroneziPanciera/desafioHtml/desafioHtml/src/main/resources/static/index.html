@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./main.js">
+    </head>
+
+    <body>
+        <header>
+            <img class="logo" src="./assent/Logo.png" alt="Logo-bluesoft">
+        </header>
+        <main>
+            <div id="app" class="container">
+                <form>
+                    <div class="form-group">
+                        <label for="cpf">Nome Competo</label>
+
+                        <input v-model="usuario.nome" type="text" class="form-control" id="nome" placeholder="Nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">CPF</label>
+                        <input v-model="usuario.cpf" type="text" class="form-control" id="cpf" placeholder="XXX.XXX.XXX-XX">
+                    </div>
+                    <div class="form-group">
+                        <label for="celular">Celular</label>
+                        <input v-model="usuario.celular" type="text" class="form-control" id="celular" placeholder="(XX) X XXXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="dt-nascimento">Data de Nascimento</label>
+                        <input v-model="usuario.dataNascimento" type="text" class="form-control" id="dt-nascimento" placeholder="DD/MM/AA">
+                    </div>
+                    <button id="botao" v-on:click="salvar" id="btn-salvar" class="btn btn-primary">Salvar</button>
+                </form>
+
+                <div>
+                    <br>
+                </div>
+
+                <form>
+                    <div class="form-group">
+                        <input v-model="search" type="text" class="form-control" id="input-search" placeholder="Busca nome">
+                    </div>
+                    <button id="botao" v-on:click="buscarPorNome" class="btn btn-primary">Buscar</button>
+                </form>
+
+                <table id="tabela-usuarios" class="table">
+                    <thead>
+                        <tr class="barra_formulario" >
+                            <th scope="col">Nome:</th>
+                            <th scope="col">CPF:</th>
+                            <th scope="col">Celular:</th>
+                            <th scope="col">Data de Nascimento:</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="corpo_formulario" v-for="usuario in usuarios" :key="usuario.id">
+                            <td>{{ usuario.nome }}</td>
+                            <td>{{ usuario.cpf }}</td>
+                            <td>{{ usuario.celular }}</td>
+                            <td>{{ usuario.dataNascimento }} data</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <section class="botoes_formulario">
+                    <div class="editar_salvar" >
+                <a id="botao_editar" v-on:click="excluirTodosUsuarios" class="btn btn-danger">Editar Cadastro</a>
+                <a id="botao_salvar" v-on:click="excluirTodosUsuarios" class="btn btn-danger">Salvar alterações</a>                        
+                    </div>
+                <a id="botao_excluir" v-on:click="excluirTodosUsuarios" class="btn btn-danger">Excluir Registro</a>                    
+                </section>
+
+            </div>    
+        </main>
+        <footer>
+            <a href="https://bluesoft.com.br/">BlueSoft</a>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
